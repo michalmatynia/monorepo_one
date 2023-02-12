@@ -1,7 +1,7 @@
 {
-  "name": "experimenttwo",
+  "name": "experimentthree",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/experimenttwo",
+  "sourceRoot": "apps/experimentthree",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,12 +9,12 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/experimenttwo",
-        "outputPath": "dist/apps/experimenttwo"
+        "root": "apps/experimentthree",
+        "outputPath": "dist/apps/experimentthree"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/experimenttwo"
+          "outputPath": "apps/experimentthree"
         },
         "production": {}
       }
@@ -23,16 +23,16 @@
       "executor": "@nrwl/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "experimenttwo:build",
+        "buildTarget": "experimentthree:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "experimenttwo:build:development",
+          "buildTarget": "experimentthree:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "experimenttwo:build:production",
+          "buildTarget": "experimentthree:build:production",
           "dev": false
         }
       }
@@ -40,14 +40,14 @@
     "export": {
       "executor": "@nrwl/next:export",
       "options": {
-        "buildTarget": "experimenttwo:build:production"
+        "buildTarget": "experimentthree:build:production"
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/experimenttwo/jest.config.ts",
+        "jestConfig": "apps/experimentthree/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -61,7 +61,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/experimenttwo/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/experimentthree/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

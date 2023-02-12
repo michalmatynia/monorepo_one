@@ -1,19 +1,19 @@
 {
-  "name": "qjubrik-e2e",
+  "name": "experimentthree-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/qjubrik-e2e/src",
+  "sourceRoot": "apps/experimentthree-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/qjubrik-e2e/cypress.config.ts",
-        "devServerTarget": "qjubrik:serve:development",
+        "cypressConfig": "apps/experimentthree-e2e/cypress.config.ts",
+        "devServerTarget": "experimentthree:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "qjubrik:serve:production"
+          "devServerTarget": "experimentthree:serve:production"
         }
       }
     },
@@ -21,10 +21,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/qjubrik-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/experimentthree-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["qjubrik"]
+  "implicitDependencies": ["experimentthree"]
 }
